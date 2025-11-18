@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Application</title>
+</head>
+<body>
+    <h1>Test Application</h1>
+    <div id="counter">Counter: <span id="count">0</span></div>
+    <button id="increment">Increment</button>
+    
+    <form id="greeting-form">
+        <input type="text" name="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <script>
+        // Simple JavaScript for interactivity
+        let count = 0;
+        document.getElementById('increment').addEventListener('click', () => {
+            count++;
+            document.getElementById('count').textContent = count;
+        });
+
+        document.getElementById('greeting-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = e.target.name.value;
+            document.getElementById('message').textContent = `Hello, ${name}!`;
+        });
+    </script>
+</body>
+</html>

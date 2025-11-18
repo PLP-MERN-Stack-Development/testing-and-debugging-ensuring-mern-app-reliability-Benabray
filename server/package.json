@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:unit": "jest --testMatch=\"**/tests/unit/**/*.test.js\"",
+    "test:integration": "jest --testMatch=\"**/tests/integration/**/*.test.js\"",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "setup-test-db": "node scripts/setupTestDB.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.20.0"
+  }
+}
